@@ -169,6 +169,5 @@ if os.path.exists(LEADERBOARD_FILE):
 if st.sidebar.button("❌ Exit Quiz"):
     for key in list(st.session_state.keys()):
         del st.session_state[key]
-    st.sidebar.write("Shutting down the app. Goodbye!")
-    time.sleep(1)
-    os._exit(0)
+    st.sidebar.write("✅ You can now close this tab. The app is stopped for your session.")
+    st.stop()
